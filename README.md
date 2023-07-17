@@ -9,19 +9,19 @@
 > Connecting on your server ssh, exemple :
 
 ```bash
- ssh student@xxxxxxx-server.eddi.cloud
+ ssh student@{{YOUR_SERVER_NAME}}-server.eddi.cloud
 ```
 
 > We need to go on the good folder
 
 ```bash
- cd /var/www/html
+ cd /var/www/html/oresto
 ```
 
 > Copy the key SSH on github and do git clone :
 
 ```bash
- git clone git@github.com:xxxxxxxxxx.git
+ git clone git@github.com:ErwannRousseau/o-resto-back.git
 ```
 
 > Go into the project folder
