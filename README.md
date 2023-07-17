@@ -99,7 +99,7 @@ MAILER_DSN=mailgun+smtp://resaoresto@sandboxcf706e4b541d4520a54edcaeba52d9e8.mai
 
 `{{NAMEOFBDD}}` = name of your BDD
 
-When it's finish, do `CTRL +X`, answer Y and make `enter`
+When it's finish, do `esc` and `:wq` to save and exit
 
 > Creation of BDD :
 
