@@ -14,8 +14,11 @@
 
 > We need to go on the good folder
 
+Create a new folder `oresto`
+
 ```bash
- cd /var/www/html/oresto
+mkdir /var/www/html/oresto
+cd /var/www/html/oresto
 ```
 
 > Copy the key SSH on github and do git clone :
