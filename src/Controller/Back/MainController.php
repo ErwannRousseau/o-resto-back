@@ -13,8 +13,11 @@ class MainController extends AbstractController
      */
     public function index(): Response
     {
+        $siteUrl = $_ENV["SITE_URL"];
+
         return $this->render('back/main/index.html.twig', [
             'controller_name' => 'MainController',
+            'site_url' => $siteUrl
         ]);
     }
 }
