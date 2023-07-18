@@ -123,22 +123,13 @@ bin/console doctrine:migrations:migrate
 bin/console lexik:jwt:generate-keypair
 ```
 
-> Change the mode of APP_ENV :
-
-```bash
-vi .env
-```
-
-On : `APP_ENV=prod`
-
-> And that's it .
-
-NB :
-To check if you have the good informations for MariaDB,
-
+Run the following command to assign the appropriate permissions to the student user:
 ```bash
 sudo chown -R student:www-data .
 ```
+
+> And that's it .
+
 
 To try the good login/password of mysql
 
