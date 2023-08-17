@@ -85,11 +85,11 @@ class ReservationController extends CoreApiController
 
         try { // try to deserialiser
             $newReservation = $serializerInterface->deserialize($jsonContent, Reservation::class, 'json');
-        } catch (EntityNotFoundException $e){
+        } catch (EntityNotFoundException $e) {
 
-            return $this->json("Denormalisation : ". $e->getMessage(), Response::HTTP_BAD_REQUEST);
-        } catch (Exception $exception){
-            
+            return $this->json("Denormalisation : " . $e->getMessage(), Response::HTTP_BAD_REQUEST);
+        } catch (Exception $exception) {
+
             return $this->json("JSON Invalide : " . $exception->getMessage(), Response::HTTP_BAD_REQUEST);
         }
 
@@ -100,19 +100,19 @@ class ReservationController extends CoreApiController
         }
 
         $newReservation->setUser($user);
-        
-        
+
+
         $reservationRepository->add($newReservation, true);
 
-        $reservationsMailer->newReservationEmail($newReservation);
-        
-        
+        // $reservationsMailer->newReservationEmail($newReservation);
+
+
         return $this->json(
-            
+
             $newReservation,
             //status 201 for created object
             Response::HTTP_CREATED,
-            
+
             [],
             // the context because we serialize an object
             [
@@ -121,10 +121,9 @@ class ReservationController extends CoreApiController
                     // I use an existing group
                     "reservation_read",
                     "user_browse"
-                    ]
-                    ]
-                );
-
+                ]
+            ]
+        );
     }
 
 
